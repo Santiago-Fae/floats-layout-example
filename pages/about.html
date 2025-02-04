@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <title>Basic Nav Example</title>
+</head>
+<body>
+    <nav aria-label="Main Navigation">
+        <a href="#" aria-label="Home"></a>
+            <picture>
+                <!-- SVG version for all scenarios due to scalability and efficiency -->
+                <source srcset="../assets/logo/ECO_logo.svg" type="image/svg+xml" />
+                <!-- High resolution PNG for large screens -->
+                <source srcset="../assets/logo/ECO_logo_big.png" media="(min-width: 1024px)" type="image/png" />
+                <!-- Small PNG for medium screens -->
+                <source srcset="../assets/logo/ECO_logo_small.png" media="(min-width: 768px)" type="image/png" />
+                <!-- High resolution JPG for small screens (lower priority than PNG) -->
+                <source srcset="../assets/logo/ECO_logo_big.jpg" media="(min-width: 480px)" type="image/jpg" />
+                <!-- Fallback small JPG for all other scenarios or if none of the above are supported -->
+                <img src="../assets/logo/ECO_logo_small.jpg" alt="ECO company logo">
+            </picture>
+        </a>
+        <span class="spacer"></span>
+        <ul>
+            <li><a href="../" aria-label="Home">Home</a></li>
+            <li><a href="./about.html" id="current-page" aria-label="About">About</a></li>
+            <li id="last-item"><a href="./contact.html" aria-label="Contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1 style="text-align: center;">My Webpage</h1>
+    </header>
+    <main id="mainContent">
+        <img src="../assets/logo/ECO_logo_big.jpg" class="logoImg float-right" alt="">
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
+    </main>
+    <footer aria-label="Page Footer">
+        <nav>
+            <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li id="last-item-footer"><a href="#">Cookies</a></li>
+            </ul>
+            <hr>
+            <p class="copyright">&copy; 2024 My Webpage</p>
+        </nav>
+    </footer>
+</body>
+</html>
